@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Esto evita que la página "baile" hacia los lados */
+}
+.hero {
+    height: 100vh;
+}
+/* ESTRUCTURA BASE */
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #00f7fa; /* Tu turquesa de marca */
+    --card-bg: #f9f9f9;
+}
+
+h1 {
+    background-color: #359dff;
+    color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para que flote */
+}
+
+
+body.dark-mode {
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+* { margin: 5; padding: 10; box-sizing: border-box; }
+
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family:'Inter', sans-serif; /* Tipografía minimalista */
+    line-height: 1.6;
+    transition: 0.3s ease;
+}
+
+
+/* NAVEGACIÓN LIMPIA */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40x;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+
+/* HERO SECTION (Menos es más) */
+.hero {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+
+.hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+/* TARJETAS MINIMALISTAS */
+.contenedor-estrategia {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que no se rompa en móvil */
+    padding: 30px;
+    border-radius: 15px;
+    
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+
+
+/* BOTONES INTERACTIVOS */
+.btn-ver {
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+
+
+/* PANELES DE INFORMACIÓN */
+.panel-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9); /* Empieza un poco más pequeño */
+    width: 90%;
+    max-width: 800px;
+    backdrop-filter: blur(15px); /* El efecto de cristal pro */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Animación fluida */
+    z-index: 1000;
+    background:  rgba(255, 255, 255, 0.6);
+}
+
+
+.panel-info:target {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1); /* Se agranda suavemente al abrir */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+
+
+.panel-info:target { display: block; }
+
+
+
+/* DISEÑO MINIMALISTA PROFESIONAL */
+.card img {
+    width: 100%;      /* Ocupa todo el ancho del cuadro */
+    height: auto;     /* Mantiene la proporción */
+    border-radius: 15px; /* Toque minimalista */
+    margin-bottom: 15px;
+}
+
+
+
+body.dark-mode {
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    --card-bg: #1a1a1a;
+}
+
+
+
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    transition: 0.3s ease;
+}
+
+
+
+/* Agregamos el borde turquesa fino que te gusta */
+.card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 247, 250, 0.3); 
+    padding: 30px;
+    margin: 10px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block; /* Para que se pongan una al lado de otra */
+    transition: 0.3s;
+}
+
+
+
+.card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 15px rgba(0, 247, 250, 0.1);
+}
+
+.btn-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+} 
+
+.btn-flotante:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.name-text {
+    color: #ffffff !important; /* Blanco puro para resaltar */
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+.btn-ver {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+
+.header-brading {
+position: fixed;
+z-index: 300;
+backdrop-filter: blur(10px); 
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ background: rgba(0, 140, 255, 0.8); backdrop-filter: blur(15px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   backdrop-filter: blur (15px);
+}
+
+.card:hover {
+ transform: translateY(-10px); transition: 0.3s; 
+
+}
+
+.sidebar-trabajos {
+    /* Fondo estilo cristal (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Bordes y detalles Premium */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-left: 4px solid #ffd700 !important; /* Tu línea dorada */
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+
+}
+
+
+.badge-pro {
+    font-size: 10px;
+    letter-spacing: 3px; /* El secreto del estilo UI caro */
+    text-transform: uppercase;
+    color: #33ff00;      /* Tu color dorado/acento */
+    background: rgba(255, 215, 0, 0.1);
+    padding: 5px 12px;
+    border-radius: 50px;
+    width: fit-content;
+    font-weight: 700;
+}
+
+.name-text {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1px; /* Letras un poco más juntas para estilo moderno */
+    margin: 50px;
+}
+
+.location-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5); /* Color gris suave para no distraer */
+    margin: 0;
+}
+
+.proyecto-card {
+    position: relative; /* Esto es vital: hace que el badge no se escape del cuadro */
+    overflow: hidden;
+}
+
+.badge-card {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent); /* Tu color dorado */
+    background: black;
+    padding: 4px 10px;
+    border-radius:  1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proyecto-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-10px) scale(1.02); /* El cuadro sube y crece un poco */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra profunda al tocarlo */
+    border-color: var(--accent); /* El borde brilla en dorado */
+
+}
+
+.tu-clase-de-texto {
+    word-wrap: break-word;     /* Obliga a las palabras largas a romperse */
+    overflow-wrap: break-word; /* Refuerzo para navegadores modernos */
+    hyphens: auto;             /* Pone guiones si es necesario */
+    max-width: 100%;           /* Asegura que no sea más ancho que su padre */
+}
+
+.contacto-container {
+    max-width: 100%;
+    overflow: hidden; /* Esto evita que el texto se salga de la caja */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: #000; /* Texto negro para que resalte sobre el verde brillante */
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7); /* Gris Premium que aprendimos hoy */
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh; /* Ocupa casi toda la pantalla inicial */
+    padding: 0 10%;
+    gap: 50px;
+}
+
+.texto-grande {
+    font-size: clamp(2rem, 8vw, 4rem); /* Se ajusta solo según el tamaño de pantalla */
+    font-weight: 900;
+    line-height: 1.1;
+    animation: slideInLeft 1s ease-out; /* Animación al cargar */
+}
+
+.foto-premium {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Animación simple */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.opcion-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Esta clase se activará con scroll o puedes usar este truco de CSS moderno: */
+.opcion-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 90vh; /* Ocupa casi toda la pantalla */
+    padding: 20px;
+    flex-wrap: wrap; /* Si la pantalla es pequeña, la foto baja sola sin romperse */
+}
+
+
+.titulo-principal {
+    font-size: 80px; /* Aquí está tu texto GRANDE */
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+}
+
+.foto-premium {
+    width: 300px;
+    height: 400px;
+    object-fit: cover; /* Para que tu foto no se vea estirada */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.hero-premium {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Evita que las animaciones "salgan" de la pantalla */
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+/* --- ANIMACIONES PREMIUM --- */
+
+.character-img {
+    height: 80vh;
+    filter: drop-shadow(0 0 30px rgba(0, 255, 127, 0.2)); /* Brillo sutil */
+    transform: translateY(100px); /* Empieza abajo */
+    opacity: 0;
+    animation: characterEntry 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-text {
+    font-size: 8rem;
+    font-weight: 900;
+    letter-spacing: -5px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: textReveal 1s ease-out 0.5s forwards; /* Empieza con retraso */
+}
+
+@keyframes characterEntry {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textReveal {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.highlight {
+    /* El degradado (Azul Cian a Verde Menta - Estilo Tech) */
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    
+    /* El truco para que el color se pegue a la letra y no al fondo */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    /* El resplandor (Glow) */
+    text-shadow: 0 0 30px rgba(0, 201, 255, 0.4);
+    
+    /* Peso extra para que se note */
+    font-weight: 900;
+}
+
+    /* Esto acerca los cuadros al texto de arriba */
+ .grid-trabajos {
+    margin-top: 20px; /* Si estaba en 50px o más, bájalo a 20 o 0 */
+}
+
+/* Opcional: Si quieres que el título de arriba no empuje tanto hacia abajo */
+.titulo-seccion {
+    margin-bottom: 10px; /* Redúcelo hasta que te guste */
+}
+
+h1 {
+    position: relative;
+    z-index: 10;      /* Esto asegura que el texto esté siempre por ENCIMA del fondo */
+    margin-bottom: 20px; 
+}
